@@ -1,0 +1,15 @@
+{
+  "name": "procgen-talk",
+  "version": "0.0.1",
+  "description": "Procedural generation talk for JSConf Tokyo, Nov 2019",
+  "main": "",
+  "scripts": {
+    "start": "cd src && reveal-md index.md -w --disable-auto-open --port 8080",
+    "build": "cd src && reveal-md index.md --static ../docs/ --static-dirs=static"
+  },
+  "author": "Andy Hall",
+  "license": "ISC",
+  "devDependencies": {
+    "reveal-md": "^3.4.0"
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>filMark</title>
+    <style type="text/css">
+        html,
+        body {
+            margin: 1rem;
+            height: 100%;
+            font: 300 17px Meiryo, Helvetica, sans-serif;
+        }
+
+        select,
+        input {
+            font: inherit;
+            min-width: 5rem;
+        }
+
+        label,
+        select,
+        input {
+            min-height: 1.2rem;
+            vertical-align: middle;
+        }
+
+        label {
+            display: block;
+            user-select: none;
+        }
+
+        button {
+            font: inherit;
+            width: 100%;
+            padding: 0.25rem;
+            margin: 0.25rem 0;
+        }
+
+        .title {
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .sep {
+            height: 0.5rem;
+            width: 2rem;
+        }
+
+        canvas {
+            border: 1px solid #333;
+        }
+
+        textarea {
+            font-size: 15px;
+            font-family: monospace;
+        }
+
+        /*
+         *
+         *      layout
+         *
+        */
+
+        .row-group {
+            margin: 1.5rem;
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: repeat(7, min-content);
+        }
+
+        .row-group>div:nth-child(1) {
+            min-width: 5rem;
+        }
+
+        .widelabel {
+            width: max-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>filmark Synthesis</h2>
+
+
+    <div class="row-group">
+
+        <div>
+            <div class="title" style="font-size: 125%;">
+                Inputs
+            </div>
+        </div>
+
+        <div>
+            <label class="widelabel">
+                Preset:
+                <select id="input-presets"></select>
+            </label>
+            <div class="sep"></div>
+
+            <label> Symmetry:</label>
+            <label class="widelabel">
+                <input type="checkbox" id="input-xsym">
+                x-axis
+            </label>
+            <label class="widelabel">
+                <input type="checkbox" id="input-ysym">
+                y-axis
+            </label>
+            <div class="sep"></div>
+
+            <label class="widelabel">
+                Edges:
+                <select id="input-edges" style="display: inline-block;">
+                    <option>wrap</option>
+                    <option>clamp</option>
+                    <option>ignore</option>
+                </select>
+            </label>
+            <div class="sep"></div>
+
+            <label class="widelabel">
+                Depth:
+                <select id="prop-depth" style="display: inline-block;">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>20</option>
+                    <option>999</option>
+                </select>
+            </label>
+            <div class="sep"></div>
+        </div>
+
+        <div>
+            <label class="widelabel">Input:</label>
+            <div class="sep"></div>
+            <canvas id="input" width="100" height="100"></canvas>
+        </div>
+
+        <div>
+            <label class="widelabel">Synth rules:</label>
+            <div class="sep"></div>
+            <canvas id="synth-rules" width="100" height="100"></canvas>
+        </div>
+
+        <div>
+            <label class="widelabel">Filtered:</label>
+            <div class="sep"></div>
+            <canvas id="filtered" width="150" height="150"></canvas>
+        </div>
+
+        <div>
+            <label class="widelabel">Filter rules:</label>
+            <div class="sep"></div>
+            <canvas id="filter-rules" width="100" height="100"></canvas>
+            <div class="sep"></div>
+
+            <label class="widelabel">Filter sym:</label>
+            <label class="widelabel">
+                <input type="checkbox" id="filter-xsym">
+                x-axis
+            </label>
+            <label class="widelabel">
+                <input type="checkbox" id="filter-ysym">
+                y-axis
+            </label>
+            <div class="sep"></div>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <div class="row-group">
+
+        <div>
+            <div class="title" style="font-size: 125%;">
+                Outputs
+            </div>
+        </div>
+
+        <div>
+            <label>Size</label>
+            <label class="widelabel" id="output-size-n">
+                <input id="output-size" type="range" min="10" max="150" value="50" step="10">
+                20
+            </label>
+            <div class="sep"></div>
+
+            <button id="but-solve">Solve</button>
+            <button id="but-step">Step</button>
+            <button id="but-anim">Animate</button>
+            <label class="widelabel" id="anim-steps-n">
+                <input id="anim-steps" type="range" min="1" max="20" value="1" step="1">
+                1
+            </label>
+            <div class="sep"></div>
+
+        </div>
+
+        <div>
+            <label class="widelabel">Output:</label>
+            <div class="sep"></div>
+            <canvas id="output"></canvas>
+        </div>
+
+        <div>
+            <label class="widelabel">Log:</label>
+            <div class="sep"></div>
+            <textarea id="output-log" rows="6" cols="15"></textarea>
+        </div>
+
+        <div>
+            <label class="widelabel">Filtered:</label>
+            <div class="sep"></div>
+            <canvas id="filtered-out" width="150" height="150"></canvas>
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+
+</html>

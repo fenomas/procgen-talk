@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        html,
+        body {
+            font: 300 28px "Helvetica Neue", Meiryo, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        .ui {
+            margin: 30px 24px;
+        }
+
+        .left {
+            float: left;
+            margin-top: 55px;
+        }
+
+        .right {
+            float: left;
+            margin-top: 15px;
+        }
+
+        .slider {
+            width: 100px;
+        }
+
+        .setting {
+            display: block;
+        }
+
+        .desc {
+            display: inline-block;
+            width: 70px;
+            text-align: end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ui left">
+
+        <label class="setting">
+            <span class="desc">size</span>
+            <input class="slider" type="range" id="size">
+        </label>
+    </div>
+
+
+    <div class="ui right">
+        <img id="slime" src="../../img/slime1.png">
+    </div>
+
+
+    <script>
+        var slider = document.getElementById('size')
+        var slime = document.getElementById('slime')
+        slider.oninput = ev => {
+            var size = parseInt(ev.target.value)/100
+            size = (size+0.25) * 1.5
+            slime.style.transform = `scale(${size}, ${size})`
+        }
+    </script>
+
+</body>
+
+</html>

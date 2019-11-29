@@ -1,0 +1,144 @@
+/* debuggin */
+iframe,
+.slides {
+    /* border: solid 1px red; */
+}
+
+
+/*
+ * 
+ *      general
+ * 
+*/
+
+.reveal blockquote {
+    background-color: #0001;
+    font-style: normal;
+}
+
+.reveal blockquote.invert {
+    color: #fdf6e3;
+    background-color: #000c;
+    width: 118%;
+    left: -9%;
+    font-style: normal;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.left {
+    position: relative;
+    float: left;
+    width: 470px;
+    top: 300px;
+}
+
+.right {
+    position: relative;
+    float: right;
+    width: 800px;
+    top: -20px;
+}
+
+.smaller {
+    font-size: 70%;
+}
+
+.smallest {
+    font-size: 50%;
+}
+
+.reveal strong,
+.reveal em {
+    color: #a27;
+}
+
+.reveal a {
+    color: #26a;
+}
+
+
+
+/*
+ * 
+ *      image
+ * 
+*/
+
+.reveal section img {
+    margin: 5px 20px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    vertical-align: middle;
+}
+
+/*
+ * 
+ *      text
+ * 
+*/
+
+.reveal {
+    font-family: Lato, Meiryo, "メイリオ", "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
+    font-weight: normal;
+    font-size: 54px;
+    color: #345;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: Lato, Impact, sans-serif;
+    font-weight: bold;
+    color: inherit;
+    text-transform: none;
+    margin: 20px 0;
+}
+
+.reveal h1 {
+    font-size: 3em;
+}
+
+.reveal h2 {
+    font-size: 2.5em;
+}
+
+.reveal h3 {
+    font-size: 1.9em;
+}
+
+.reveal h4 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.reveal h5 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.reveal h6 {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+
+/*
+ * 
+ *      code
+ * 
+*/
+
+.reveal pre {
+    font-size: 1em;
+    width: 70%;
+}
+
+.reveal pre code {
+    padding: 20px;
+    max-height: 600px;
+}

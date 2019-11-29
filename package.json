@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "start": "cd src && reveal-md index.md -w --disable-auto-open --port 8080",
-    "build": "cd src && reveal-md index.md --static ../docs/ --static-dirs=static"
+    "build": "cd src && reveal-md index.md --static ../docs/ --static-dirs=static --assets-dir=assets"
   },
   "author": "Andy Hall",
   "license": "ISC",

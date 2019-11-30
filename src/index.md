@@ -136,7 +136,7 @@ revealOptions:
 
 ---
 
-#### Lesson 1:
+#### Point 1:
 
 <br>
 
@@ -253,7 +253,7 @@ This talk won't cover ML/AI.
 
 ---
 
-#### Lesson 2:
+#### Point 2:
 
 <br>
 
@@ -347,8 +347,10 @@ function makeSlime() {
 ----
 
 
-> <a href="javascript:demo('voxels')"><img src="./static/img/TODO.png">and now for a non-trivial example</a>
-<!-- .element: style="width: 90%;" --> 
+> <a href="javascript:demo('voxels')"><img src="./static/img/voxels.png"></a>
+<!-- .element: style="width: 50%;" --> 
+
+#### and now for a non-trivial example
 
 
 
@@ -407,7 +409,7 @@ function voxel(x, y, z) {
 
 ---
 
-#### Lesson 3:
+#### Point 3:
 
 <br>
 
@@ -524,7 +526,7 @@ function voxel(x, y, z) {
 
 ---
 
-#### Lesson 4:
+#### Point 4:
 
 <br>
 
@@ -543,14 +545,23 @@ function voxel(x, y, z) {
 
 ----
 
-#### A playground is a unit test
-#### for your function mapping
+#### A playground is a dev environment
+#### for checking how *any set of inputs*
+#### maps to an *output*
 
 <br>
 
 <iframe frameborder="0" width="420px" height="150px" 
   data-src="./static/demos/fake-playground/"
   style="transform: scale(1.75); border: 3px solid #444;"></iframe>
+
+
+----
+
+### Effectively: 
+## **unit tests** for 
+## procedural content!
+
 
 
 
@@ -638,12 +649,12 @@ function voxel(x, y, z) {
 <br>
 
 
-----
+---
 
 <!-- posterity version -->
 
 ##### Demos and source:
-#### <a href="http://aphall.com/TODO" target="_blank">aphall.com/TODO</a>
+#### <a href="http://aphall.com/2019/11/jsconf/" target="_blank">aphall.com/2019/11/jsconf/</a>
 
 
 

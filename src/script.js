@@ -11,14 +11,14 @@ var targets = {
     voxels: 'voxel_demo',
     music1: 'music_demo',
     music2: 'music_demo',
-    music3: 'music_demo',
+    music3: '_blank',
     other: '_blank',
 }
 
 
 window.demo = function (str) {
     // hack to see if I'm running locally on my machine
-    var local = false // window.location.toString().includes('localhost')
+    var local = window.location.toString().includes('localhost')
     if (!local) str = 'other'
     var url = urls[str] || urls.other
     var tgt = targets[str] || targets.other

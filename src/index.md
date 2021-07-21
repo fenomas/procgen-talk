@@ -190,7 +190,7 @@ Guess what algorithm made this thing:
 
 #### What it looks like in action:
 
-> <a href="https://andyhall.github.io/glsl-projectron/" target="_blank">github:andyhall/glsl-projectron</a>
+> <a href="https://fenomas.github.io/glsl-projectron/" target="_blank">github:fenomas/glsl-projectron</a>
 
 
 

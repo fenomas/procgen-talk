@@ -3,7 +3,7 @@ var urls = {
     voxels: 'http://localhost:8081',
     music1: 'http://localhost:8082',
     music2: 'http://localhost:8082',
-    music3: 'https://github.com/andyhall/webaudio-music/',
+    music3: 'https://github.com/fenomas/webaudio-music/',
     other: './static/demos/offline',
 }
 

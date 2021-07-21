@@ -6,7 +6,7 @@ These are slides for my
 at [JSConf](https://jsconf.jp) Tokyo, Nov 30 2019. 
 The talk is in Japanese but the slides are English.
 
-### [Launch slides in browser](https://andyhall.github.io/procgen-talk/)
+### [Launch slides in browser](https://fenomas.github.io/procgen-talk/)
 
 ----
 
